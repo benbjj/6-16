@@ -1,0 +1,134 @@
+{
+  "choiceNodes": [
+    {
+      "id": "first-choice",
+      "options": [
+        "“你们是谁？”",
+        "“门为什么锁着？”",
+        "“我为什么会在这里？”"
+      ]
+    },
+    {
+      "id": "route-choice",
+      "options": [
+        "检查主教学楼",
+        "前往校门",
+        "调查广播室"
+      ]
+    },
+    {
+      "id": "records-choice",
+      "options": [
+        "二年 B 班点名册",
+        "去年六月值日表",
+        "旧教学楼出入记录"
+      ]
+    },
+    {
+      "id": "ink-confrontation",
+      "options": [
+        "“是你重写的。”",
+        "“你在保护谁？”",
+        "把领用记录放在他面前"
+      ]
+    },
+    {
+      "id": "rescue-choice",
+      "options": [
+        "抓住悠真的手",
+        "抢救值日表"
+      ]
+    }
+  ],
+  "combinationsChecked": 162,
+  "factsExpected": [
+    "loop",
+    "roster"
+  ],
+  "findings": [],
+  "routesPassed": 162,
+  "sampleRoutes": [
+    {
+      "combination": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decisions": {
+        "tone": "cautious",
+        "firstRoute": "main",
+        "recordFocus": "attendance",
+        "confrontation": "accuse",
+        "rescue": "yuma"
+      },
+      "facts": [
+        "loop",
+        "roster"
+      ],
+      "selected": [
+        "“你们是谁？”",
+        "检查主教学楼",
+        "二年 B 班点名册",
+        "“是你重写的。”",
+        "抓住悠真的手"
+      ]
+    },
+    {
+      "combination": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "decisions": {
+        "tone": "direct",
+        "firstRoute": "gate",
+        "recordFocus": "roster",
+        "confrontation": "protect",
+        "rescue": "roster"
+      },
+      "facts": [
+        "loop",
+        "roster"
+      ],
+      "selected": [
+        "“门为什么锁着？”",
+        "前往校门",
+        "去年六月值日表",
+        "“你在保护谁？”",
+        "抢救值日表"
+      ]
+    },
+    {
+      "combination": [
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "decisions": {
+        "tone": "vulnerable",
+        "firstRoute": "radio",
+        "recordFocus": "access",
+        "confrontation": "evidence",
+        "rescue": "roster"
+      },
+      "facts": [
+        "loop",
+        "roster"
+      ],
+      "selected": [
+        "“我为什么会在这里？”",
+        "调查广播室",
+        "旧教学楼出入记录",
+        "把领用记录放在他面前",
+        "抢救值日表"
+      ]
+    }
+  ],
+  "storyNodes": 68
+}
