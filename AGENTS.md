@@ -14,3 +14,5 @@ When implementing from a selected generated mock, treat that image as the source
 - Extend the prototype through the existing dialogue, choice, fact-card, history, save, auto, and skip patterns; do not redesign the shell when adding chapters.
 - Keep the score story-driven: ambient, investigation, confrontation, and Haruka-memory modes should change with narrative state while rain remains a supporting layer.
 - Reference public scene assets through Vite's base URL so local preview and GitHub Pages subpath deployments behave identically.
+- Keep the first paint lightweight: use the classroom preview immediately, fade in the compressed full scene, then preload later locations after the title is ready.
+- Preserve a complete title flow with a skippable opening, new game, continue, chapter select, and functional settings.

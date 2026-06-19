@@ -4,9 +4,10 @@ const assetBase = typeof document === "undefined"
   : new URL(configuredBase, document.baseURI).href;
 
 export const SCENES = {
-  classroom: `${assetBase}assets/classroom-rain.png`,
-  corridor: `${assetBase}assets/old-corridor-rain.png`,
-  records: `${assetBase}assets/records-room-rain.png`,
+  classroomPreview: `${assetBase}assets/classroom-preview.jpg`,
+  classroom: `${assetBase}assets/classroom-rain.jpg`,
+  corridor: `${assetBase}assets/old-corridor-rain.jpg`,
+  records: `${assetBase}assets/records-room-rain.jpg`,
 };
 
 export const FACTS = {
