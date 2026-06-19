@@ -1,7 +1,9 @@
+const assetBase = import.meta.env?.BASE_URL ?? "./";
+
 export const SCENES = {
-  classroom: "/assets/classroom-rain.png",
-  corridor: "/assets/old-corridor-rain.png",
-  records: "/assets/records-room-rain.png",
+  classroom: `${assetBase}assets/classroom-rain.png`,
+  corridor: `${assetBase}assets/old-corridor-rain.png`,
+  records: `${assetBase}assets/records-room-rain.png`,
 };
 
 export const FACTS = {

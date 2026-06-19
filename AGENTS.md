@@ -12,3 +12,5 @@ When implementing from a selected generated mock, treat that image as the source
 - New locations should feel like the same school and weather, with realistic environment art rather than placeholder panels.
 - Character routes must pair evidence with an ordinary memory of Haruka so she remains a person rather than only a mystery.
 - Extend the prototype through the existing dialogue, choice, fact-card, history, save, auto, and skip patterns; do not redesign the shell when adding chapters.
+- Keep the score story-driven: ambient, investigation, confrontation, and Haruka-memory modes should change with narrative state while rain remains a supporting layer.
+- Reference public scene assets through Vite's base URL so local preview and GitHub Pages subpath deployments behave identically.

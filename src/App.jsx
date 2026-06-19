@@ -61,11 +61,18 @@ export function App() {
   const [auto, setAuto] = useState(false);
   const [skip, setSkip] = useState(false);
   const [toast, setToast] = useState("");
-  const { cue, enabled: soundEnabled, start: startAudio, toggle: toggleSound } = useAmbientAudio();
 
   const line = choiceResult ?? STORY[index];
   const lineText = resolveText(line, decisions);
   const sceneImage = SCENES[line.scene] ?? SCENES.classroom;
+  const scoreMode = line.effect === "memory" || line.speaker?.includes("夏见遥")
+    ? "memory"
+    : line.scene === "corridor" || line.effect === "midnight"
+      ? "confrontation"
+      : line.scene === "records" || line.loop === 2
+        ? "investigation"
+        : "ambient";
+  const { cue, enabled: soundEnabled, start: startAudio, toggle: toggleSound } = useAmbientAudio(scoreMode);
   const hasSave = useMemo(() => Boolean(localStorage.getItem(SAVE_KEY)), [toast]);
   const chapterOneIndex = useMemo(() => STORY.findIndex((item) => item.id === "chapter-one"), []);
   const chapterLabel = index >= chapterOneIndex ? "第一章　缺席者" : "序章　雨没有停";
